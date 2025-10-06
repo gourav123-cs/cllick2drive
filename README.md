@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Click2Drive — Hourly & Monthly Car Rentals (Prototype)
 
 ## Getting Started
 
@@ -18,7 +18,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses Tailwind CSS and Framer Motion.
+
+## Environment
+
+Create `.env.local` (copy from the template below):
+
+```env
+NEXT_PUBLIC_APP_NAME=Click2Drive
+NEXT_PUBLIC_DEFAULT_CITY=Delhi
+NEXT_PUBLIC_ENABLE_TELEMETRY=false
+```
 
 ## Learn More
 
@@ -31,6 +41,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js. After import, set environment variables from `.env.local`.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

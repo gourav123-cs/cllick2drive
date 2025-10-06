@@ -1,17 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --accent: #ff1a1a; /* neon red */
+  --accent-muted: #ff4d4d;
+  --card: #111111;
+  --border: #262626;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-muted: var(--accent-muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Force dark as default; light can be added later */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -22,5 +31,17 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Accent ring and glow helpers */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition-colors bg-[--color-accent] text-black hover:bg-[--color-accent-muted];
+}
+
+.card {
+  @apply rounded-xl border border-[--color-border] bg-[--color-card];
+}
+
+.container-px {
+  @apply px-4 sm:px-6 lg:px-8;
 }
